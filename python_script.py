@@ -58,3 +58,13 @@ print(f"hex_id: {hex(id(set_))}                 set_: {set_}")
 
 # 해당 코드를 실행했을 때 나오는 결과를 유추하고
 # mutable 자료형과 immutable 자료형은 어떤 게 있는지 알아야 함
+
+
+# ----------------------------------------------------------------------------
+
+list1 = [1,2,3,4,5]
+print(id(list1))
+print(id(list1[0]))
+print(id(list1[1]))
+print(id(list1[2]))
+print(id(list1[3]))
