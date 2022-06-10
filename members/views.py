@@ -43,7 +43,7 @@ class UserApiView(APIView):
         # print(dev_languages)
         for language in dev_languages: # language = object
             # print(dir(language.userprofile))
-            language_member = language.dev_language.userprofiledevlanguage_set.all().exclude(userprofile=user.userprofile).annotate(userprofile__user__fullname=F('userprofile__user__fullname')).values_list("userprofile__user__fullname", flat=True)
+            language_member = language.dev_language.userprofiledevlanguage_set.all().exclude(userprofile=user.userprofile).annotate(userprofile__user__fullname=F('userprofile__user__fullname')).values_list("userprofile__user__fullname", flat=True) # 가독성 제로 코드,,
             language_member = list(language_member)
             print(f"개발언어: {language.dev_language} / 멤버 : {language_member}")
 
