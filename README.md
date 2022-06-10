@@ -12,3 +12,4 @@
 - one to one, many to many 등 다양한 속성을 가진 필드를 사용해 모델링 해보기
 - CBV를 사용해 views.py 구성해보기
 - custom user psermission을 활용해 내가 원하는 대로 권한 바꿔보기
+  - models.py : https://github.com/GoHeeSeok00/drf_sparta/blob/main/members/models.py
