@@ -37,15 +37,13 @@ class ArticleApiView(APIView):
         print(categorys)
         print(type(categorys))
         # objects.get에서 객체가 존재하지 않을 경우 DoesNotExist Exception 발생
-        try:
-            category_querysets = CategoryModel.objects.filter(tag__in=categorys)
-            # article instance 생성
-            article = ArticleModel.objects.create(user_id=request.user.id, title=title, content=content)
-            article.category.set(category_querysets)
-            article.save()
-        except CategoryModel.DoesNotExist:
-            # some event
-            return Response("존재하지 않는 카테고리입니다.", status=status.HTTP_404_NOT_FOUND)
+
+        category_querysets = CategoryModel.objects.filter(tag__in=categorys)
+        # article instance 생성
+        article = ArticleModel.objects.create(user_id=request.user.id, title=title, content=content)
+        article.category.set(category_querysets)
+        article.save()
+
         return Response("게시글 작성 성공!!", status=status.HTTP_200_OK)
 
     def put(self):
