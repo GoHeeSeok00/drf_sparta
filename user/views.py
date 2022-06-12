@@ -1,4 +1,4 @@
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import permissions, status
@@ -64,11 +64,27 @@ class UserApiView(APIView):
 
             except UserModel.DoesNotExist:
                 # some event
-                return Response("존재하지 않는 사용자입니다.")
+                return Response("존재하지 않는 사용자입니다.", status=status.HTTP_404_NOT_FOUND)
         else: # 로그인 X
             return Response("로그인이 필요합니다.")
 
 
+    def post(self, request):
+        return Response()
+
+
+    def put(self, request):
+        return Response()
+
+    def delete(self, request):
+        return Response()
+
+
+# 로그인 view
+class LoginApiView(APIView):
+    permission_classes = [permissions.AllowAny]
+    def get(self):
+        return
     def post(self, request):
         username = request.data.get('username', '')
         password = request.data.get('password', '')
@@ -81,11 +97,15 @@ class UserApiView(APIView):
         return Response({"message": "로그인 성공!!"}, status=status.HTTP_200_OK)
 
 
-    def put(self, request):
-        return Response()
+# 로그아웃 view
+class LogoutApiView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+    def get(self):
+        return
 
-    def delete(self, request):
-        return Response()
+    def post(self, request):
+        logout(request)
+        return Response({"message": "로그아웃 성공!!"}, status=status.HTTP_200_OK)
 
 
 class UserProfileApiView(APIView):
