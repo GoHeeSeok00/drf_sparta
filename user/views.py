@@ -4,10 +4,10 @@ from rest_framework import permissions
 
 from django.db.models import F
 
-from members.models import User as UserModel
-from members.models import Hobby as HobbyModel
-from members.models import UserProfile as UserProfileModel
-from members.models import UserProfileDevLanguage as UserProfileDevLanguageModel
+from user.models import User as UserModel
+from user.models import Hobby as HobbyModel
+from user.models import UserProfile as UserProfileModel
+from user.models import UserProfileDevLanguage as UserProfileDevLanguageModel
 
 # Custom permissions
 class UserLevelPermission(permissions.BasePermission):

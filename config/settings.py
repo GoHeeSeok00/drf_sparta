@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'assignment',
-    'members',
+    'user',
 ]
 
 REST_FRAMEWORK = {

@@ -1,11 +1,11 @@
 from django.contrib import admin
 from django.contrib.auth.models import Group
 
-from members.models import User as UserModel
-from members.models import UserProfile as UserProfileModel
-from members.models import Hobby as HobbyModel
-from members.models import DevLanguage as DevLanguageModel
-from members.models import UserProfileDevLanguage as UserProfileDevLanguage
+from user.models import User as UserModel
+from user.models import UserProfile as UserProfileModel
+from user.models import Hobby as HobbyModel
+from user.models import DevLanguage as DevLanguageModel
+from user.models import UserProfileDevLanguage as UserProfileDevLanguage
 
 # Unregister(Group)
 admin.site.unregister(Group)
