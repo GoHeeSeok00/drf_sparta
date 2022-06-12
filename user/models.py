@@ -75,6 +75,7 @@ class User(AbstractBaseUser):
     def is_staff(self):
         return self.is_admin
 
+
 # Create your models here.
 class UserProfile(models.Model):
     user = models.OneToOneField(to=User, verbose_name="사용자", on_delete=models.CASCADE, primary_key=True)
@@ -86,17 +87,20 @@ class UserProfile(models.Model):
     def __str__(self):
         return f"{self.user.fullname}님의 프로필입니다."
 
+
 class Hobby(models.Model):
     hobby = models.CharField("취미", max_length=20)
 
     def __str__(self):
         return self.hobby
 
+
 class DevLanguage(models.Model):
     dev_language = models.CharField("개발 언어", max_length=20)
 
     def __str__(self):
         return self.dev_language
+
 
 class UserProfileDevLanguage(models.Model):
     userprofile = models.ForeignKey(to=UserProfile, on_delete=models.CASCADE)
