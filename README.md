@@ -17,16 +17,16 @@
     - 깃헙 코드: https://github.com/GoHeeSeok00/drf_sparta/blob/main/assignment/views.py
 2. python mutable, immutable 객체 정리하기 
     - 블로그: https://a-littlecoding.tistory.com/87
-    - 깃헙 코드: https://github.com/GoHeeSeok00/drf_sparta/commit/d387696f080ddb2b9d59749c205c25dfe3ab6dfd
+    - 코드: https://github.com/GoHeeSeok00/drf_sparta/blob/main/python_script.py
 
 * * *
 ### 🎈2일차 과제 (22.06.08)
 1. one to one, many to many 등 다양한 속성을 가진 필드를 사용해 모델링 해보기
-    - models.py: https://github.com/GoHeeSeok00/drf_sparta/blob/main/members/models.py
-    - admin.py: https://github.com/GoHeeSeok00/drf_sparta/blob/main/members/admin.py
+    - user/models.py: https://github.com/GoHeeSeok00/drf_sparta/blob/main/user/models.py
+    - user/admin.py: https://github.com/GoHeeSeok00/drf_sparta/blob/main/user/admin.py
 2. CBV를 사용해 views.py 구성해보기
 3. custom user psermission을 활용해 내가 원하는 대로 권한 바꿔보기
-    - views.py: https://github.com/GoHeeSeok00/drf_sparta/blob/main/members/views.py
+    - user/views.py: https://github.com/GoHeeSeok00/drf_sparta/blob/main/user/views.py
 
 
 * * *
