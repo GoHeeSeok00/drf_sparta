@@ -14,19 +14,19 @@
 * * *
 ### 🎈1일차 과제 (22.06.07)
 1. 포스트맨으로 get 요청 보낼때 success 메시지 출력되게 views.py, urls.py 작성하기
-    - 깃헙 코드 : https://github.com/GoHeeSeok00/drf_sparta/blob/main/assignment/views.py
+    - 깃헙 코드: https://github.com/GoHeeSeok00/drf_sparta/blob/main/assignment/views.py
 2. python mutable, immutable 객체 정리하기 
-    - 블로그 : https://a-littlecoding.tistory.com/87
-    - 깃헙 코드 : https://github.com/GoHeeSeok00/drf_sparta/commit/d387696f080ddb2b9d59749c205c25dfe3ab6dfd
+    - 블로그: https://a-littlecoding.tistory.com/87
+    - 깃헙 코드: https://github.com/GoHeeSeok00/drf_sparta/commit/d387696f080ddb2b9d59749c205c25dfe3ab6dfd
 
 * * *
 ### 🎈2일차 과제 (22.06.08)
 1. one to one, many to many 등 다양한 속성을 가진 필드를 사용해 모델링 해보기
-    - models.py : https://github.com/GoHeeSeok00/drf_sparta/blob/main/members/models.py
-    - admin.py : https://github.com/GoHeeSeok00/drf_sparta/blob/main/members/admin.py
+    - models.py: https://github.com/GoHeeSeok00/drf_sparta/blob/main/members/models.py
+    - admin.py: https://github.com/GoHeeSeok00/drf_sparta/blob/main/members/admin.py
 2. CBV를 사용해 views.py 구성해보기
 3. custom user psermission을 활용해 내가 원하는 대로 권한 바꿔보기
-    - views.py : https://github.com/GoHeeSeok00/drf_sparta/blob/main/members/views.py
+    - views.py: https://github.com/GoHeeSeok00/drf_sparta/blob/main/members/views.py
 
 
 * * *
@@ -44,16 +44,19 @@
     - 작성 시간, 수정 시간 필드 추가
 ```
 7. Article 모델에서 외래 키를 활용해서 작성자와 카테고리의 관계를 맺어주세요
+    - blog/models.py: https://github.com/GoHeeSeok00/drf_sparta/blob/main/blog/models.py
 ```
     - 사용자는 `ForeignKey` 카테고리는 `ManyToManyField` 사용해서 관계 형성
 ```
 8. admin.py에 만들었던 모델들을 추가해 사용자와 게시글을 자유롭게 생성, 수정 할 수 있도록 설정해주세요
+    - blog/admin.py: https://github.com/GoHeeSeok00/drf_sparta/blob/main/blog/admin.py
 9. admin 페이지에서 사용자, 카테고리, 게시글을 자유롭게 추가해주세요
 10. views.py에 username, password를 받아 로그인 할 수 있는 기능을 만들어주세요
     - 로그인 기능 구현이 처음이시라면 3일차 강의자료 5번 항목을 확인해주세요
 11. views.py에 로그인 한 사용자의 정보, 게시글을 보여주는 기능을 만들어주세요
-    - user/views: https://github.com/GoHeeSeok00/drf_sparta/blob/main/user/views.py
+    - user/views.py: https://github.com/GoHeeSeok00/drf_sparta/blob/main/user/views.py
 12. views.py에 <글 제목, 카테고리, 글 내용>을 입력받아 게시글을 작성해주는 기능을 만들어주세요
     - 게시글은 계정 생성 후 3일 이상 지난 사용자만 생성할 수 있도록 권한을 설정해주세요
     - 테스트 코드에서는 계정 생성 후 3분 이상 지난 사용자는 게시글을 작성할 수 있도록 해주세요
-      - blog/views: https://github.com/GoHeeSeok00/drf_sparta/blob/main/blog/views.py
+      - blog/views.py: https://github.com/GoHeeSeok00/drf_sparta/blob/main/blog/views.py
+      - blog/urls.py: https://github.com/GoHeeSeok00/drf_sparta/blob/main/blog/urls.py
