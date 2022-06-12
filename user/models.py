@@ -99,8 +99,8 @@ class DevLanguage(models.Model):
         return self.dev_language
 
 class UserProfileDevLanguage(models.Model):
-    userprofile = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
-    dev_language = models.ForeignKey(DevLanguage, on_delete=models.CASCADE)
+    userprofile = models.ForeignKey(to=UserProfile, on_delete=models.CASCADE)
+    dev_language = models.ForeignKey(to=DevLanguage, on_delete=models.CASCADE)
 
     def __str__(self):
         return f"{self.userprofile.user.fullname} // {self.dev_language}"

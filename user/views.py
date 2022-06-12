@@ -33,7 +33,7 @@ class UserApiView(APIView):
 
     def get(self, request):
         # users = UserModel.objects.all()
-        users = UserModel.objects.all().values_list("fullname", flat=True) # values_list 실험 코드
+        users = UserModel.objects.all().values_list("username", flat=True) # values_list 실험 코드
         users = list(users)
 
         return Response(users)
