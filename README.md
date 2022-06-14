@@ -70,5 +70,10 @@
 ### 🎈5일차 과제 (22.06.13)
 1. blog 앱에 <게시글, 작성자, 작성 시간, 내용>이 포함된 comment라는 테이블을 추가해주세요
     - 게시글과 작성자는 fk 필드로 생성해주셔야 해요
+        - blog/models.py: https://github.com/GoHeeSeok00/drf_sparta/blob/main/blog/models.py#L27
 2. Django Serializer 기능을 사용해 로그인 한 사용자의 기본 정보들을 response data에 넣어서 return 해주세요
+    - user/views.py: https://github.com/GoHeeSeok00/drf_sparta/blob/main/user/views.py#L35
 3. 사용자가 작성 한 게시글을 로그인 한 (2번)User의 serializer data에 포함시켜서 같이 return해주세요
+    - user/serializers.py: https://github.com/GoHeeSeok00/drf_sparta/blob/main/user/serializers.py#L64
+    - result_image: https://github.com/GoHeeSeok00/drf_sparta/issues/11
+
