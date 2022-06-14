@@ -5,11 +5,11 @@ from user.models import User as UserModel
 
 
 class Category(models.Model):
-    tag = models.CharField("카테고리 이름", max_length=50)
+    name = models.CharField("카테고리 이름", max_length=50)
     information = models.TextField("카테고리 정보")
 
     def __str__(self):
-        return self.tag
+        return self.name
 
 
 # 게시글 모델 / article model

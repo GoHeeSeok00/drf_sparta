@@ -29,46 +29,10 @@ class UserLevelPermission(permissions.BasePermission):
 
 # Create your views here.
 class UserApiView(APIView):
-    permission_classes = [permissions.AllowAny]
-    # permission_classes = [permissions.IsAuthenticated]
-    # permission_classes = [permissions.IsAdminUser]
-
-    # custom permission
-    # permission_classes = [UserLevelPermission]
+    permission_classes = [permissions.IsAuthenticated]
 
     def get(self, request):
-        if request.user.is_authenticated: # 로그인이 되어있다면
-            # objects.get에서 객체가 존재하지 않을 경우 DoesNotExist Exception 발생
-            try:
-                user = UserModel.objects.get(id=request.user.id)
-                user_profile = user.userprofile
-                profile_data = {
-                    "이름": user.fullname,
-                    "나이": user_profile.age,
-                    "생일": user_profile.birthday,
-                    # "취미": list(user_profile.hobby.all()),
-                    # "개발언어": list(user_profile.userprofiledevlanguage_set.all()),
-                    "소개": user_profile.introduction,
-                }
-
-                user_articles = user.article_set.all()
-                articles_data = []
-                for user_article in user_articles:
-                    articles_data.append(user_article.title)
-
-                data = {
-                    "프로필": profile_data,
-                    "게시글": articles_data,
-                }
-
-                return Response(data)
-
-            except UserModel.DoesNotExist:
-                # some event
-                return Response("존재하지 않는 사용자입니다.", status=status.HTTP_404_NOT_FOUND)
-        else: # 로그인 X
-            return Response("로그인이 필요합니다.")
-
+        return Response(UserSerializer(request.user).data)
 
     def post(self, request):
         return Response()

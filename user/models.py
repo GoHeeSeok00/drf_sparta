@@ -90,18 +90,18 @@ class UserProfile(models.Model):
 
 # 취미 모델 / hobby model
 class Hobby(models.Model):
-    hobby = models.CharField("취미", max_length=20)
+    name = models.CharField("취미", max_length=20)
 
     def __str__(self):
-        return self.hobby
+        return self.name
 
 
 # 개발언어 모델 / devlanguage model
 class DevLanguage(models.Model):
-    dev_language = models.CharField("개발 언어", max_length=20)
+    name = models.CharField("개발 언어", max_length=20)
 
     def __str__(self):
-        return self.dev_language
+        return self.name
 
 
 # 사용자_개발언어 관계모델
