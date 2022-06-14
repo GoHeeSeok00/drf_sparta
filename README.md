@@ -3,10 +3,14 @@
 
 ## Information
 1. 강의시간 : 월/수/금 (20:00~22:00)
-2. 과제
+2. 과제 목표
     - 과제는 단순하게 문제를 풀어보는 것에서 끝나는 것이 아닌, 이후 진행 할 프로젝트의 기반을 다지고 활용하는 것을 목표로 진행합니다.
     - 과제는 지금까지 강의했던 내용을 기반으로 내고 있습니다.
     - 과제에 나온 코드를 작성하실 때에는 꼭 과제에 있는 내용만 적으실 필요는 없습니다. 테이블, 권한 등을 자유롭게 추가 / 수정 하셔도 좋습니다.
+3. App 설명
+    - user: 회원가입 정보, 프로필 정보 등 사용자 리소스를 핸들링
+    - blog: 게시글 리소스를 핸들링
+    - assignment: DRF 연습 및 과제 
 
 <br><br>
 
@@ -60,3 +64,11 @@
     - 테스트 코드에서는 계정 생성 후 3분 이상 지난 사용자는 게시글을 작성할 수 있도록 해주세요
       - blog/views.py: https://github.com/GoHeeSeok00/drf_sparta/blob/main/blog/views.py
       - blog/urls.py: https://github.com/GoHeeSeok00/drf_sparta/blob/main/blog/urls.py
+
+
+* * *
+### 🎈5일차 과제 (22.06.13)
+1. blog 앱에 <게시글, 작성자, 작성 시간, 내용>이 포함된 comment라는 테이블을 추가해주세요
+    - 게시글과 작성자는 fk 필드로 생성해주셔야 해요
+2. Django Serializer 기능을 사용해 로그인 한 사용자의 기본 정보들을 response data에 넣어서 return 해주세요
+3. 사용자가 작성 한 게시글을 로그인 한 (2번)User의 serializer data에 포함시켜서 같이 return해주세요
