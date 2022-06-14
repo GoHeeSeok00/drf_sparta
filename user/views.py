@@ -7,9 +7,10 @@ from user.models import User as UserModel
 from user.models import Hobby as HobbyModel
 from user.models import UserProfile as UserProfileModel
 from user.models import UserProfileDevLanguage as UserProfileDevLanguageModel
+from user.serializers import UserSerializer
 
 
-class _():
+class _(): # TODO 자동 임포트시 해당 클래스 위에 생성 // 나중에 삭제
     pass
 
 
@@ -124,3 +125,9 @@ class UserProfileApiView(APIView):
     def delete(self, request):
         return Response()
 
+class UsersApiView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get(self, request):
+        user_serializer = UserSerializer(UserModel.objects.all(), many=True).data
+        return Response(user_serializer, status=status.HTTP_200_OK)
