@@ -76,7 +76,7 @@ class User(AbstractBaseUser):
         return self.is_admin
 
 
-# Create your models here.
+# 사용자 프로필 모델 / userprofile models
 class UserProfile(models.Model):
     user = models.OneToOneField(to=User, verbose_name="사용자", on_delete=models.CASCADE, primary_key=True)
     hobby = models.ManyToManyField(to="Hobby", verbose_name="취미")
@@ -88,6 +88,7 @@ class UserProfile(models.Model):
         return f"{self.user.fullname}님의 프로필입니다."
 
 
+# 취미 모델 / hobby model
 class Hobby(models.Model):
     hobby = models.CharField("취미", max_length=20)
 
@@ -95,6 +96,7 @@ class Hobby(models.Model):
         return self.hobby
 
 
+# 개발언어 모델 / devlanguage model
 class DevLanguage(models.Model):
     dev_language = models.CharField("개발 언어", max_length=20)
 
@@ -102,6 +104,7 @@ class DevLanguage(models.Model):
         return self.dev_language
 
 
+# 사용자_개발언어 관계모델
 class UserProfileDevLanguage(models.Model):
     userprofile = models.ForeignKey(to=UserProfile, on_delete=models.CASCADE)
     dev_language = models.ForeignKey(to=DevLanguage, on_delete=models.CASCADE)
