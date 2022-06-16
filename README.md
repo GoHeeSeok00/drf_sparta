@@ -34,7 +34,7 @@
 
 
 * * *
-### 🎈4일차 과제 (22.06.10)
+### 🎈3일차 과제 (22.06.10)
 1. Django 프로젝트를 생성하고, user 라는 앱을 만들어서 settings.py 에 등록해보세요.
 2. user/models.py에 `Custom user model`을 생성한 후 django에서 user table을 생성 한 모델로 사용할 수 있도록 설정해주세요
 ```
@@ -67,7 +67,7 @@
 
 
 * * *
-### 🎈5일차 과제 (22.06.13)
+### 🎈4일차 과제 (22.06.13)
 1. blog 앱에 <게시글, 작성자, 작성 시간, 내용>이 포함된 comment라는 테이블을 추가해주세요
     - 게시글과 작성자는 fk 필드로 생성해주셔야 해요
         - blog/models.py: https://github.com/GoHeeSeok00/drf_sparta/blob/main/blog/models.py#L27
@@ -77,3 +77,12 @@
     - user/serializers.py: https://github.com/GoHeeSeok00/drf_sparta/blob/main/user/serializers.py#L64
     - result_image: https://github.com/GoHeeSeok00/drf_sparta/issues/11
 
+
+* * *
+### 🎈5일차 과제 (22.06.15)
+1. product라는 앱을 새로 생성해주세요
+2. product 앱에서 <제목, 썸네일, 설명, 등록일자, 노출 시작 일, 노출 종료일, 활성화 여부>가 포함된 event 테이블을 생성해주세요
+3. django serializer에서 기본적으로 제공하는 validate / create / update 기능을 사용해 event 테이블의 생성/수정 기능을 구현해주세요
+    - 전달 받은 데이터는 **kwargs를 사용해 입력해주세요
+    - postman으로 파일을 업로드 할 때는 raw 대신 form-data를 사용하고, Key type을 File로 설정해주세요
+4. 등록된 이벤트 중 현재 시간이 노출 시작 일과 노출 종료 일의 사이에 있고, 활성화 여부가 True인 event 쿼리셋을 직렬화 해서 리턴해주는 serializer를 만들어주세요
