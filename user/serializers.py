@@ -8,7 +8,9 @@ from user.models import Hobby as HobbyModel
 from user.models import UserProfileDevLanguage as UserProfileDevLanguageModel
 from user.models import DevLanguage as DevLanguageModel
 
-class _:
+
+
+class _: # TODO 나중에 삭제
     pass
 
 
