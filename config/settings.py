@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'assignment',
     'user',
     'blog',
+    'product',
 ]
 
 REST_FRAMEWORK = {
