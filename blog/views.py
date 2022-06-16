@@ -34,9 +34,8 @@ class ArticleApiView(APIView):
         title = request.data.get("title", "")
         content = request.data.get("content", "")
         categorys = request.data.get("categorys", "")
-        print(categorys)
-        print(type(categorys))
-        # objects.get에서 객체가 존재하지 않을 경우 DoesNotExist Exception 발생
+        # print(categorys)
+        # print(type(categorys))
 
         category_querysets = CategoryModel.objects.filter(tag__in=categorys)
         # article instance 생성
