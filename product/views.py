@@ -17,7 +17,7 @@ class EventApiView(APIView):
         event_serializer = EventSerializer(EventModel.objects.filter(
             start_point__lte=timezone.now(),
             end_point__gt=timezone.now(),
-            is_activated=True
+            is_activate=True
         ), many=True)
         return Response(event_serializer.data, status=status.HTTP_200_OK)
 
