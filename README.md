@@ -89,3 +89,18 @@
         - product/views.py: https://github.com/GoHeeSeok00/drf_sparta/blob/main/product/views.py#L24
 4. 등록된 이벤트 중 현재 시간이 노출 시작 일과 노출 종료 일의 사이에 있고, 활성화 여부가 True인 event 쿼리셋을 직렬화 해서 리턴해주는 serializer를 만들어주세요
     - product/views.py: https://github.com/GoHeeSeok00/drf_sparta/blob/main/product/views.py#L15
+
+
+* * *
+### 🎈6일차 과제 (22.06.17)
+1. product 앱에서 <작성자, 썸네일, 상품 설명, 등록일자, 노출 종료 일자, 가격, 수정 일자, 활성화 여부>가 포함된 product 테이블을 생성해주세요
+2. django serializer를 사용해 validate / create / update 하는 기능을 구현해주세요
+    1. custom validation 기능을 사용해 노출 종료 일자가 현재보다 더 이전 시점이라면 상품을 등록할 수 없도록 해주세요
+    2. custom creator 기능을 사용해 상품 설명의 마지막에 “<등록 일자>에 등록된 상품입니다.” 라는 문구를 추가해주세요
+    3. custom update 기능을 사용해 상품이 update 됐을 때 상품 설명의 가장 첫줄에 “<수정 일자>에 수정되었습니다.” 라는 문구를 추가해주세요
+3. product 앱에서 <작성자, 상품, 내용, 평점, 작성일>을 담고 있는 review 테이블을 만들어주세요
+4. 현재 날짜를 기준으로, 노출 종료 날짜가 지나지 않았고 활성화 여부가 True이거나 로그인 한 사용자가 등록 한 상품들의 정보를 serializer를 사용해 리턴해주세요
+5. 4번 상품 정보를 리턴 할 때 상품에 달린 review와 평균 점수를 함께 리턴해주세요
+    1. 평균 점수는 (리뷰 평점의 합/리뷰 갯수)로 구해주세요
+    2. 작성 된 리뷰는 모두 return하는 것이 아닌, 가장 최근 리뷰 1개만 리턴해주세요
+6. 로그인 하지 않은 사용자는 상품 조회만 가능하고, 회원가입 이후 3일 이상 지난 사용자만 상품을 등록 할 수 있도록 권한을 설정해주세요
