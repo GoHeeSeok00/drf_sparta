@@ -9,11 +9,7 @@ from user.models import UserProfileDevLanguage as UserProfileDevLanguageModel
 from user.models import DevLanguage as DevLanguageModel
 
 
-
-class _: # TODO 나중에 삭제
-    pass
-
-
+""""""
 # DevLanguage serializer
 class DevLanguageSerializer(serializers.ModelSerializer):
     class Meta:

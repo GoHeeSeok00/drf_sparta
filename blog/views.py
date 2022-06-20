@@ -9,9 +9,7 @@ from blog.models import Category as CategoryModel
 from blog.models import Article as ArticleModel
 
 
-class _(): # TODO 자동 임포트시 해당 클래스 위에 생성 // 나중에 삭제
-    pass
-
+""""""
 # custom permission
 class ThreeDaysFromJoinDate(permissions.BasePermission):
     """
